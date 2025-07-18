@@ -1,1 +1,87 @@
-<p>register-page works!</p>
+<div class="h-screen w-screen flex justify-center items-center bg-gray-100">
+    <div class="border-gray-400 shadow border-2 rounded-2xl p-8 mx-5 my-14  mt-96 md:m-10  bg-white">
+        <div class="text-center">
+            <div class="flex justify-center my-4">
+                <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .text { fill: #2A5ADA; font-family: 'Segoe UI', sans-serif; font-size: 36px; font-weight: 600; }
+                    .wing { fill: #4F85E7; }
+                </style>
+                <g>
+                    <!-- Icono tipo ala estilizada -->
+                    <path class="wing" d="M10 15 C25 5, 35 5, 50 15 C35 10, 30 20, 10 15 Z" />
+                    <!-- Texto Aely -->
+                    <text x="60" y="40" class="text">Aely</text>
+                </g>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <h1 class="text-center text-4xl font-extrabold text-blue-800">Registrar Cuenta</h1>
+        </div>
+        <div class="mt-4">
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mb-4">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" class="w-full p-2 border border-gray-300 rounded " placeholder="Ingrese sus nombres">
+                    </div>
+                    <div class="mb-4">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" class="w-full p-2 border border-gray-300 rounded" placeholder="Ingrese sus apellidos">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mb-4">
+                        <label for="correo">Correo Electronico</label>
+                        <input type="text" id="correo" class="w-full p-2 border border-gray-300 rounded " placeholder="Ingrese su correo electronico">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" class="w-full p-2 border border-gray-300 rounded" placeholder="Ingrese su contraseña">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mb-4">
+                        <label for="pais">Pais</label>
+                        <select id="pais" class="w-full p-2 border border-gray-300 rounded">
+                            <option value="">Seleccione su pais</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="PE">Peru</option>
+                            <option value="CO">Colombia</option>
+                            <option value="AR">Argentina</option>
+                            <option value="CL">Chile</option>
+                            <option value="MX">Mexico</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" id="telefono" class="w-full p-2 border border-gray-300 rounded" placeholder="Ingrese su telefono">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="mb-4">
+                        <label for="idioma">Idioma</label>
+                        <select id="idioma" class="w-full p-2 border border-gray-300 rounded">
+                            <option value="">Seleccione su idioma</option>
+                            <option value="es">Español</option>
+                            <option value="en">Inglés</option>
+                            <option value="fr">Francés</option>
+                            <option value="pt">Portugués</option>
+                            <option value="de">Alemán</option>
+                            <option value="it">Italiano</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="fecha-nacimiento">Fecha Nacimiento</label>
+                        <input type="date" id="fecha-nacimiento" class="w-full p-2 border border-gray-300 rounded" placeholder="Ingrese su fecha de nacimiento">
+                    </div>
+                </div>
+                <div class="text-center md:text-end">
+                    <button type="submit" class="w-full md:w-1/4 p-2 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer rounded hover:shadow">Registrar Cuenta</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
