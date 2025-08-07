@@ -1,0 +1,96 @@
+<div class="container mx-auto">
+  <div>
+    <div class="text-center my-5">
+      <h1 class="text-3xl font-semibold text-blue-500">Lista de Aeropuertos</h1>
+    </div>
+    <div class="flex justify-between mb-5">
+        <div>
+            <input
+                type="text"
+                placeholder="Buscar aeropuerto..."
+                class="border border-gray-500 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-92 max-w-lg"
+            />
+        </div>
+        <div>
+            <button
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer"
+                (click)="openCreateModal()"
+            >
+                Crear Aeropuerto
+            </button>
+        </div>
+    </div>
+    <div>
+      <table
+        class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md table-auto text-center"
+      >
+        <thead class="bg-gray-200 text-gray-700 uppercase text-sm">
+          <tr>
+            <th class="px-4 py-2 text-center">ID</th>
+            <th class="px-4 py-2 text-center">Nombre</th>
+            <th class="px-4 py-2 text-center">Ciudad</th>
+            <th class="px-4 py-2 text-center">País</th>
+            <th class="px-4 py-2 text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-gray-100 text-center">
+            <td class="px-4 py-2">1</td>
+            <td class="px-4 py-2">Madrid Barajas</td>
+            <td class="px-4 py-2">Madrid</td>
+            <td class="px-4 py-2">España</td>
+            <td class="px-4 py-2 flex justify-center items-center gap-2">
+              <button
+                class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer"
+              >
+                Ver
+              </button>
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer"
+              >
+                Editar
+              </button>
+              <button
+                class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 cursor-pointer"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-100 text-center">
+            <td class="px-4 py-2">2</td>
+            <td class="px-4 py-2">Barcelona El Prat</td>
+            <td class="px-4 py-2">Barcelona</td>
+            <td class="px-4 py-2">España</td>
+            <td class="px-4 py-2 flex justify-center items-center gap-2">
+              <button
+                class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer"
+              >
+                Ver
+              </button>
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer"
+              >
+                Editar
+              </button>
+              <button
+                class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 cursor-pointer"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flex gap-3 justify-center align-middle py-5">
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Anterior</a>
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">1</a>
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">2</a>
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">3</a>
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">4</a>
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">5</a>
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Siguiente</a>
+    </div>
+  </div>
+</div>

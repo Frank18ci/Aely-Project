@@ -1,12 +1,12 @@
 <div class="mx-auto container ">
-    <div class="border border-gray-300 bg-gray-200 my-5 mx-3">
-        <h1 class="text-2xl">Buscar Vuelos</h1>
+    <div class="border border-gray-300 bg-gray-200 my-5 mx-3 rounded-2xl shadow-lg p-5">
+        <h1 class="text-2xl font-semibold">Buscar Vuelos</h1>
         <hr>
         <form>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
                <div class="mb-4 flex flex-col">
                     <label for="aeropuertosalida">Aeropuerto de Salida</label>
-                    <select class="border border-gray-700 rounded p-2" id="aeropuertosalida">
+                    <select class="border border-gray-700 rounded p-2 outline-none focus:ring-2 focus:ring-blue-500 bg-neutral-50" id="aeropuertosalida">
                         <option value="">Seleccione un aeropuerto</option>
                         <option value="MAD">Madrid Barajas</option>
                         <option value="BCN">Barcelona El Prat</option>
@@ -15,7 +15,7 @@
                </div> 
                <div class="mb-4 flex flex-col">
                     <label for="aeropuertollegada">Aeropuerto de Llegada</label>
-                    <select class="border border-gray-700 rounded p-2" id="aeropuertollegada">
+                    <select class="border border-gray-700 rounded p-2 outline-none focus:ring-2 focus:ring-blue-500 bg-neutral-50" id="aeropuertollegada">
                         <option value="">Seleccione un aeropuerto</option>
                         <option value="MAD">Madrid Barajas</option>
                         <option value="BCN">Barcelona El Prat</option>
@@ -25,7 +25,8 @@
                <div class="flex items-center">
                     <button type="submit" class="w-full p-2 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer rounded hover:shadow">Buscar</button>
                </div>
-               <div class="mb-4 flex flex-col">
+               <div class="hidden">
+                <div class="flex mb-4 flex-col">
                    <label for="fechaida">Fecha de Ida</label>
                    <app-data-picker id="fechaida" class=" p-2"></app-data-picker>
                </div>
@@ -33,18 +34,22 @@
                    <label for="fechallegada">Fecha de Llegada</label>
                    <app-data-picker id="fechallegada" class="p-2"></app-data-picker>
                </div>
+               </div>
             </div>        
         </form>
     </div>
     <div class="my-5">
-        <h1 class="text-2xl text-center">Destinos destacados para ti</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 p-4 items-center justify-center content-center">
-            <div class="w-2/4 border border-gray-300 rounded-lg shadow hover:shadow-xl cursor-pointer user-select-none transition-transform">
-                <img src="madrid.jpg" alt="Madrid Centro" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                <h3 class="text-md text-center font-light">España</h3>
-                <h2 class="text-xl text-center font-bold">Madrid</h2>
-                <p class="text-center mt-5">Descubre la capital de España, su cultura y gastronomía.</p>
-            </div>
+        <h1 class="text-2xl text-center font-semibold my-5">Destinos destacados para ti</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 p-4 items-center justify-center content-center">
+            <app-destinos class="justify-center flex w-full" [destino]="{ id: 1, nombre: 'Madrid', pais: 'España', descripcion: 'Descubre la capital de España, su cultura y gastronomía.', imagen: 'madrid.jpg' }" />
+            <app-destinos class="justify-center flex w-full" [destino]="{ id: 2, nombre: 'Barcelona', pais: 'España', descripcion: 'Explora la arquitectura de Gaudí y las playas de Barcelona.', imagen: 'barcelona.jpg' }" />
+            <app-destinos class="justify-center flex w-full" [destino]="{ id: 3, nombre: 'Machu Picchu', pais: 'Perú', descripcion: 'Descubre la maravilla de Machu Picchu y su historia.', imagen: 'machu.jpg' }" />
+            <app-destinos class="justify-center flex w-full" [destino]="{ id: 4, nombre: 'Miami', pais: 'Estados Unidos', descripcion: 'Disfruta de las playas y la vida nocturna de Miami.', imagen: 'miami.jpg' }" />
+            <app-destinos class="justify-center flex w-full" [destino]="{ id: 5, nombre: 'China', pais: 'China', descripcion: 'Admira la Gran Muralla y la Ciudad Prohibida.', imagen: 'china.jpeg' }" />
+            <app-destinos class="justify-center flex w-full" [destino]="{ id: 6, nombre: 'Nueva Delhi', pais: 'India', descripcion: 'Explora la vibrante capital de India y su rica historia.', imagen: 'delhi.jpg' }" />
+        </div>
+        <div class="my-8 text-center">
+            <a href="" class="text-blue-600 hover:underline text-2xl font-semibold">Ver Más</a>
         </div>
     </div>
 </div>

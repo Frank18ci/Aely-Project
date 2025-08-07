@@ -22,19 +22,48 @@
         <div class="mt-4">
             <form>
                 <div class="mb-4">
-                    <label for="correo">Correo Electronico</label>
-                    <input type="text" id="correo" class="w-full p-2 border border-gray-300 rounded " placeholder="Ingrese su correo electronico">
+                    <div class="relative">
+                        <input 
+                            type="email" 
+                            id="correo" 
+                            class="peer w-full p-3 border-2 border-gray-400 rounded-lg focus:border-blue-600 focus:outline-none transition-colors duration-200 bg-gray-50 placeholder-transparent" 
+                            placeholder="Ingrese su correo electrónico" 
+                            autocomplete="email"
+                        >
+                        <label 
+                            for="correo" 
+                            class="absolute left-3 top-2 text-gray-600 text-sm bg-white px-1 transition-all duration-200 pointer-events-none 
+                                   peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700 
+                                   peer-focus:-top-3 peer-focus:text-blue-700 peer-focus:text-xs"
+                        >
+                            Correo Electrónico
+                        </label>
+                    </div>
                 </div>
                 <div class="mb-4">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" class="w-full p-2 border border-gray-300 rounded" placeholder="Ingrese su contraseña">
+                    <div class="relative">
+                        <input
+                            type="password"
+                            id="password"
+                            class="peer w-full p-3 border-2 border-gray-400 rounded-lg focus:border-blue-600 focus:outline-none transition-colors duration-200 bg-gray-50 placeholder-transparent"
+                            placeholder="Ingrese su contraseña"
+                            >
+                        <label 
+                            for="password"
+                            class="absolute left-3 top-2 text-gray-600 text-sm bg-white px-1 transition-all duration-200 pointer-events-none
+                                  peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-700
+                                  peer-focus:-top-3 peer-focus:text-blue-700 peer-focus:text-xs">
+                            Contraseña
+                        </label>
+                    </div>
+                    
                 </div>
                 <div>
                     <button type="submit" class="w-full p-2 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer rounded hover:shadow">Iniciar Sesión</button>
                 </div>
                 <div class="my-3">
                     <p class="text-center text-gray-500">¿Todavia no tienes una cuenta registrada?</p>
-                    <a routerLink="/auth/register" class="cursor-pointer select-none my-3 text-gray-600 border-gray-600 border-2 rounded-2xl hover:border-gray-700 hover:shadow-xl block w-full text-center p-2">Regístrate aquí</a>
+                    <a routerLink="/auth/register" class="cursor-pointer select-none my-3 text-gray-500 border-gray-400 border-2 rounded-2xl hover:border-gray-700 hover:shadow-xl block w-full text-center p-2">Regístrate aquí</a>
                 </div>
             </form>
         </div>
