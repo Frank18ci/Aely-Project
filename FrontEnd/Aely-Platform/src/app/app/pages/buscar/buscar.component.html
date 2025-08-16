@@ -1,0 +1,36 @@
+<div class="container mx-auto">
+    <app-buscar-vuelos></app-buscar-vuelos>
+</div>
+<hr class="border-t border-gray-300 my-6" />
+<div class="container mx-auto">
+    <div class="flex justify-between items-center my-5">
+        <div class="flex items-center space-x-4">
+            <div>
+                Mostrar precios para:
+            </div>
+            <div class="space-x-2">
+                <button class="bg-green-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-green-700">Turista</button>
+                <button class="bg-zinc-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-green-700">Ejecutivo</button>
+                <button class="bg-zinc-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-green-700">Primera Clase</button>
+            </div>
+        </div>
+        <div class="bg-zinc-50 shadow px-4 py-2 rounded">
+            <div class="flex items-center space-x-4">
+            <div>
+                Clasificar por:
+            </div>
+            <div>
+                <select name="" id="">
+                    <option value="">Precio</option>
+                    <option value="">Duración</option>
+                    <option value="">Escalas</option>
+                </select>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="my-5 flex flex-col gap-6">
+        <app-card-vuelo />
+        <app-card-vuelo />
+    </div>
+</div>

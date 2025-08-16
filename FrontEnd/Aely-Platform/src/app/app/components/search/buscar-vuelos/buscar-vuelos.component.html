@@ -1,0 +1,40 @@
+<div class="border border-gray-300 bg-zinc-50 my-5 mx-3  shadow-lg p-5">
+        <h1 class="text-2xl font-semibold">Buscar Vuelos</h1>
+        <hr>
+        <form>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+               <div class="mb-4 flex flex-col">
+                    <label for="aeropuertosalida">Aeropuerto de Salida</label>
+                    <select class="border border-gray-700 rounded p-2 outline-none focus:ring-2 focus:ring-blue-500 bg-neutral-50" id="aeropuertosalida">
+                        <option value="">Seleccione un aeropuerto</option>
+                        <option value="MAD">Madrid Barajas</option>
+                        <option value="BCN">Barcelona El Prat</option>
+                        <option value="MAL">Málaga</option>
+                    </select>
+               </div> 
+               <div class="mb-4 flex flex-col">
+                    <label for="aeropuertollegada">Aeropuerto de Llegada</label>
+                    <select class="border border-gray-700 rounded p-2 outline-none focus:ring-2 focus:ring-blue-500 bg-neutral-50" id="aeropuertollegada">
+                        <option value="">Seleccione un aeropuerto</option>
+                        <option value="MAD">Madrid Barajas</option>
+                        <option value="BCN">Barcelona El Prat</option>
+                        <option value="MAL">Málaga</option>
+                    </select>
+               </div> 
+               <div class="flex items-center flex-col justify-end">
+                    <button type="submit" class="w-full p-2 bg-blue-600 hover:bg-blue-700 text-white cursor-pointer rounded hover:shadow">Buscar</button>
+                    <a routerLink="/app/buscar" class="text-blue-600 hover:underline">¿Necesitas ayuda?</a>
+               </div>
+               <div class="hidden">
+                <div class="flex mb-4 flex-col">
+                   <label for="fechaida">Fecha de Ida</label>
+                   <app-data-picker id="fechaida" class=" p-2"></app-data-picker>
+               </div>
+               <div class="mb-4 flex flex-col">
+                   <label for="fechallegada">Fecha de Llegada</label>
+                   <app-data-picker id="fechallegada" class="p-2"></app-data-picker>
+               </div>
+               </div>
+            </div>        
+        </form>
+    </div>

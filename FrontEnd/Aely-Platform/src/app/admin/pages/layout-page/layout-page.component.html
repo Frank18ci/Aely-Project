@@ -1,3 +1,34 @@
 <div>
-  <router-outlet></router-outlet>
+  <div>
+    <div class="w-full bg-zinc-800 text-white p-4 flex justify-between items-center">
+      <div>
+            <svg width="200" height="30" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <style>
+                .text { fill: #2A5ADA; font-family: 'Segoe UI', sans-serif; font-size: 36px; font-weight: 600; }
+                .wing { fill: #4F85E7; }
+            </style>
+            <g>
+                <!-- Icono tipo ala estilizada -->
+                <path class="wing" d="M10 15 C25 5, 35 5, 50 15 C35 10, 30 20, 10 15 Z" />
+                <!-- Texto Aely -->
+                <text x="60" y="40" class="text">Aely</text>
+            </g>
+            </svg>
+        </div>
+    </div>
+  </div>
+  <div class="flex w-full h-screen">
+    <div class="w-64 h-screen bg-zinc-700 border-r border-zinc-300 p-4">
+      <nav class="space-y-4">
+        <a routerLink="/admin/aeropuertos" class="block text-gray-300 hover:text-blue-500 cursor-pointer">Aeropuertos</a>
+        <a routerLink="/admin/vuelos" class="block text-gray-300 hover:text-blue-500 cursor-pointer">Vuelos</a>
+        <a routerLink="/admin/reservas" class="block text-gray-300 hover:text-blue-500 cursor-pointer">Reservas</a>
+        <a routerLink="/admin/usuarios" class="block text-gray-300 hover:text-blue-500 cursor-pointer">Usuarios</a>
+        <a routerLink="/admin/reportes" class="block text-gray-300 hover:text-blue-500 cursor-pointer">Reportes</a>
+      </nav>
+    </div>
+    <div class="w-full p-6">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
