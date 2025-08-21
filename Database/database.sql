@@ -68,17 +68,6 @@ create table avion(
     id_aerolinea int references aerolinea(id)
 );
 
-create table clase_vuelo(
-	id int auto_increment primary key,
-    nombre varchar(100) unique,
-	estado bit
-);
-create table tipo_persona(
-	id int auto_increment primary key,
-    tipo varchar(100) unique,
-	estado bit
-);
-
 create table estado_vuelo(
 	id int auto_increment primary key,
 	estado varchar(100) unique
