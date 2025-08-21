@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { BusquedaComponent } from './pages/busqueda/busqueda.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
+import { MisReservasComponent } from './pages/mis-reservas/mis-reservas.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'buscar',
         component: BuscarComponent
+      },
+      {
+        path: 'mis-reservas',
+        component: MisReservasComponent
       }
     ]
   }

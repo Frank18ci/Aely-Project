@@ -1,0 +1,38 @@
+<div class="container mx-auto">
+  <h1 class="text-5xl font-bold my-4 text-gray-700">Mis Reservas</h1>
+  <div class="my-12">
+    <form>
+      <div class="grid md:grid-cols-3 justify-items-center">
+        <div class="flex  justify-center gap-2">
+          
+          <mat-form-field class="w-64">
+            <mat-label>
+                <i class=" fas fa-search"></i>
+                Buscar reserva</mat-label>
+            <input matInput placeholder="Perú" value="reserva" />
+          </mat-form-field>
+        </div>
+        <div>
+          <app-data-picker-aerly class="w-64"></app-data-picker-aerly>
+        </div>
+        <div>
+          <mat-form-field class="w-64">
+            <mat-label>Estado</mat-label>
+            <select matNativeControl required>
+                <option value="pendiente">Pendiente</option>
+                <option value="confirmada">Confirmada</option>
+                <option value="cancelada">Cancelada</option>
+            </select>
+            </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="my-12">
+    <div>
+        <app-card-reserva></app-card-reserva>
+        <app-card-reserva></app-card-reserva>
+        <app-card-reserva></app-card-reserva>
+    </div>
+  </div>
+</div>
