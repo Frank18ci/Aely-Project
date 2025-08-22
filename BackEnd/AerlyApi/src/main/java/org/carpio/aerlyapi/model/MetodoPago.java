@@ -11,19 +11,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Pais {
+@Table(name = "metodo_pago")
+public class MetodoPago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
-    private String nombre;
-    private String icono;
-    @Column(unique = true)
-    private String codigoTelefonoPais;
-    private boolean estado;
-
-    @OneToMany(mappedBy = "pais")
-    private List<Usuario> usuarios;
-    @OneToMany(mappedBy = "pais")
-    private List<Estado> estados;
+    private String metodo;
+    @OneToMany(mappedBy = "metodoPago")
+    private List<Pago> pagos;
 }

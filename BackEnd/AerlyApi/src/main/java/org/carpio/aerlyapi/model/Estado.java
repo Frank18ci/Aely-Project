@@ -11,19 +11,17 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Pais {
+public class Estado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
     private String nombre;
-    private String icono;
-    @Column(unique = true)
-    private String codigoTelefonoPais;
-    private boolean estado;
 
-    @OneToMany(mappedBy = "pais")
-    private List<Usuario> usuarios;
-    @OneToMany(mappedBy = "pais")
-    private List<Estado> estados;
+    @ManyToOne
+    @JoinColumn(name = "id_pais")
+    private Pais pais;
+
+    @OneToMany(mappedBy = "estado")
+    private List<Aeropuerto> aeropuertos;
 }

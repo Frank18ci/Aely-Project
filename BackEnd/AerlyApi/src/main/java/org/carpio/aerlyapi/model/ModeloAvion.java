@@ -5,25 +5,25 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Pais {
+@Table(name = "modelo_avion")
+public class ModeloAvion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
     private String nombre;
-    private String icono;
-    @Column(unique = true)
-    private String codigoTelefonoPais;
-    private boolean estado;
+    private int capacidad;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal peso;
 
-    @OneToMany(mappedBy = "pais")
-    private List<Usuario> usuarios;
-    @OneToMany(mappedBy = "pais")
-    private List<Estado> estados;
+    @OneToMany(mappedBy = "modeloAvion")
+    private List<Avion> aviones;
+
 }

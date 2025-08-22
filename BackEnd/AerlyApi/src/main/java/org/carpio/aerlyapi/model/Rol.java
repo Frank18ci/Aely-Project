@@ -11,19 +11,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Pais {
+public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
     private String nombre;
-    private String icono;
-    @Column(unique = true)
-    private String codigoTelefonoPais;
-    private boolean estado;
 
-    @OneToMany(mappedBy = "pais")
+    @OneToMany(mappedBy = "rol")
     private List<Usuario> usuarios;
-    @OneToMany(mappedBy = "pais")
-    private List<Estado> estados;
 }

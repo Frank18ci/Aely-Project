@@ -6,7 +6,7 @@ create table pais(
 	id int auto_increment primary key,
     nombre varchar(100) unique,
     icono varchar(100),
-    codigoTelefonoPais varchar(100) unique,
+    codigo_telefono_pais varchar(100) unique,
     estado bit
 );
 
