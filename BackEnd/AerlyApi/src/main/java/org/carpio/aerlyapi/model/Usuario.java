@@ -1,6 +1,7 @@
 package org.carpio.aerlyapi.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,9 +18,13 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "El correo electrónico es obligatorio")
     private String correoElectronico;
+    @NotBlank(message = "La contraseña es obligatoria")
     private String password;
+    @NotBlank(message = "El/La nombre es obligatorio")
     private String nombres;
+    @NotBlank(message = "El/La apellido es obligatorio")
     private String apellidos;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "fecha_nacimiento")
