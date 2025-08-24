@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @Builder
 public class EstadoVueloDto {
     private Long id;
-    private String nombre;
+    private String estado;
 }
