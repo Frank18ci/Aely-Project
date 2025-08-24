@@ -18,7 +18,6 @@ public class Pais {
     @Column(unique = true)
     private String nombre;
     private String icono;
-    @Column(unique = true)
     private String codigoTelefonoPais;
     private boolean estado;
 

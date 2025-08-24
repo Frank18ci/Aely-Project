@@ -13,7 +13,7 @@ public class Asiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true, name = "numero_asiento")
+    @Column(name = "numero_asiento")
     private String numeroAsiento;
 
     @ManyToOne

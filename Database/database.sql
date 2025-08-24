@@ -6,7 +6,7 @@ create table pais(
 	id int auto_increment primary key,
     nombre varchar(100) unique,
     icono varchar(100),
-    codigo_telefono_pais varchar(100) unique,
+    codigo_telefono_pais varchar(100),
     estado bit
 );
 
@@ -99,7 +99,7 @@ create table estado_asiento(
 create table asiento(
 	id int auto_increment primary key,
     id_vuelo int references vuelo(id),
-    numero_asiento varchar(50) unique,
+    numero_asiento varchar(50),
     id_clase_asiento int references clase_asiento(id),
     id_estado_asiento int references estado_asiento(id)
 );
@@ -161,7 +161,7 @@ INSERT INTO pais (nombre, icono, codigo_telefono_pais, estado) VALUES
 ('Japón', 'jp.png', '+81', 1),
 ('Canadá', 'ca.png', '+1', 1),
 ('Perú', 'pe.png', '+51', 1),
-('Colombia', 'co.png', '+57', 1)
+('Colombia', 'co.png', '+57', 1);
 
 -- idioma
 INSERT INTO idioma (nombre, estado) VALUES
