@@ -74,10 +74,8 @@ public class UsuarioServiceImpl implements UsuarioService, UserDetailsService {
 
     @Override
     public void deleteUsuario(Long id) {
-        if(!usuarioRepository.existsById(id)){
-            throw new ResourceNotFound("Usuario no encontrado con id: " + id);
-        }
-        usuarioRepository.deleteById(id);
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(() -> new ResourceNotFound("Usuario no encontrado con id: " + id));
+        usuarioRepository.delete(usuario);
     }
 
 }
