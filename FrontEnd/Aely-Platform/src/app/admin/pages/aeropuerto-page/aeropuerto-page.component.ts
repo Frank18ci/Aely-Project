@@ -11,4 +11,7 @@ export class AeropuertoPageComponent {
     // Logic to open the modal for creating a new airport
     console.log('Open create airport modal');
   }
+  constructor(){
+    
+  }
 }
