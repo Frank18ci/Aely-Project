@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import Destino from '../../../models/destino';
 
 @Component({
   selector: 'app-destinos',
@@ -8,11 +7,4 @@ import Destino from '../../../models/destino';
   styleUrl: './destinos.component.css'
 })
 export class DestinosComponent {
-  @Input() destino: Destino = {
-    id: 0,
-    nombre: '',
-    pais: '',
-    descripcion: '',
-    imagen: ''
-  };
 }
