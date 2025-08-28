@@ -4,4 +4,4 @@ export default interface Destino {
     pais: string;
     descripcion: string;
     imagen: string;
-    }
+}
