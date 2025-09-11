@@ -8,6 +8,6 @@ export default interface Aeropuerto {
     ubicacion: string;
     direccion: string;
     estado: boolean;
-    id_estado: Estado;
+    estadoAeropuerto: Estado;
     idioma: Idioma;
 }

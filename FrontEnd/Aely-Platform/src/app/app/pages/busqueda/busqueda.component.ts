@@ -4,7 +4,7 @@ import { DestinosComponent } from "../../components/card/destinos/destinos.compo
 import { BuscarVuelosComponent } from "../../components/search/buscar-vuelos/buscar-vuelos.component";
 @Component({
   selector: 'app-busqueda',
-  imports: [DestinosComponent, BuscarVuelosComponent],
+  imports: [BuscarVuelosComponent],
   templateUrl: './busqueda.component.html',
   styleUrl: './busqueda.component.css'
 })
