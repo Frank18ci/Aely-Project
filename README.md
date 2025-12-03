@@ -13,7 +13,7 @@ Aely-Project es una aplicación para la gestión y venta de vuelos. Permite a lo
 
 ## Tecnologías utilizadas
 
-- Frontend: Angular
+- Frontend: Angular 19
 - Backend: Spring boot
 - Base de datos: MySQL
 - Autenticación: JWT
